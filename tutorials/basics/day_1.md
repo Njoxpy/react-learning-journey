@@ -1,5 +1,18 @@
 # Day 1
 
+- [Introduction](#introduction)
+- [Single Page Applications](#single-page-applications)
+- [Traditional Websites](#traditional-websites)
+- [Prerequisites](#prerequisites)
+- [Tools](#tools)
+- [Creating React Application](#creating-react-application)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [npm start](#npm-start)
+- [Best Practices](#best-practices)
+- [Exercise](#exercise)
+- [Articles](#articles)
+
 ## Introduction
 
 - React is a JavaScript library that helps us create interactive web applications. React also allows us to easily create SPAs (Single Page Applications).
@@ -91,5 +104,9 @@ npm run start
 - After that will open into your default browser automatically with this UI
 
 ![Locally Development Server](/assets/npm%20start.PNG)
+
+## Best Practices
+
+## Exercise
 
 ## Articles
