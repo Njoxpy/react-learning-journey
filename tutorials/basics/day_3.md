@@ -121,14 +121,13 @@ export default Button;
 
 On the top left is the name of the component that is currently being observer usign react developer tools and on the right side are the list of functionality that you can with the react application offered by the React Developer Tools, the first one is `suspend` which is used to suspend the current element in your react application, the 2nd one is used for inspecting that component into a DOM elements tab section, the last one is for logging component data into the console and when you click into it you will get component data into the console.
 
-
 ## Best Practices
 
 - Naming convention of the function should resemble with the event of the element, like that from the above a example since we are dealing with the click event then the name of the function should start with the name handle then followed by the type of event.
 
 - Use meangfull and descriptive names for your variables so that next time another person is into your codebase knows the flow of your project from start to finish.
 
-- When passing a name of the function as the dynamic values into onClick functionality then be carefull not to invoke a function.Example:
+- When passing a name of the function as the dynamic values into onClick functionality be carefull not to invoke a function instead we pass a reference to the function as the event handler.Example:
 
 ```js
 const Home = () => {
@@ -150,6 +149,8 @@ const Home = () => {
 
 export default Home;
 ```
+
+- Prefer to use arrow function over regular because arrow function are clean, easy to debug.
 
 ## Exercise
 
@@ -184,3 +185,16 @@ export default Home;
 - Using Functional Updates: Explain when you would use functional updates with useState and provide an example.
 
 - State Management Best Practices: Discuss best practices for managing state with useState in React functional components.
+
+##### Click Events Questions
+
+- How can you prevent the default behavior of a click event in React?
+- How would you pass additional data or parameters to the event handler function when handling a click event?
+- What is event delegation in React, and how does it relate to handling click events?
+- Explain the difference between using arrow functions and regular functions for event handlers in React.
+- How can you conditionally handle a click event based on certain conditions in your component's state or props?
+- What are the potential performance implications of attaching too many click event handlers in a React application, and how can you mitigate them?
+- How does event bubbling work in React, and how can you use it to handle click events efficiently?
+- What are some common patterns for handling click events in React functional components?
+- How does the synthetic event system in React differ from native browser events, and what advantages does it offer?
+- Explain the concept of event pooling in React and its significance in managing memory usage when handling multiple events.
