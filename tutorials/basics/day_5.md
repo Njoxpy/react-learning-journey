@@ -14,7 +14,7 @@
 
 ```js
 const handleDelete = (id) => {
-  const newBlogs = blogs.filter(blog => blog.id !== id);
+  const newBlogs = blogs.filter((blog) => blog.id !== id);
   setBlogs(newBlogs);
 };
 ```
@@ -54,7 +54,6 @@ const BlogList = ({ blogs, title, handleDelete }) => {
 };
 
 export default BlogList;
-
 ```
 
 ## useEffect Hook
@@ -69,7 +68,7 @@ export default BlogList;
 
 There are many instances to use react useEffect but those are some.
 
-- In this part of learning React I will create an  API using Golang for fetching blog posts, don't be confused if you don't know how to create an API using Go, you can use raw data by typing manually at the top of your program.
+- In this part of learning React I will create an API using Golang for fetching blog posts, don't be confused if you don't know how to create an API using Go, you can use raw data by typing manually at the top of your program.
 
 - So when you start your react application using `npm start` the page initially loads so when there is useEffect function contains code into then that is noted as the intially render the first, also when components loads is considered as the render so useEffect function works,So in my blog project I can implement delete functionality for deleting blog post after doing that the page renders.
 
@@ -77,33 +76,51 @@ There are many instances to use react useEffect but those are some.
 import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 const Home = () => {
-    const [blogs, setBlogs] = useState([
-        { title: "How to Fail in programming", body: "Programming is like thresome in other terms", author: "NjoxPy", id: 1, category: "mindset" },
-        { title: "Getting started with Go", body: "Before diving into go, you need to configure Your text editor", author: "Mdudu", id: 2, category: "web development" },
-    ]);
+  const [blogs, setBlogs] = useState([
+    {
+      title: "How to Fail in programming",
+      body: "Programming is like thresome in other terms",
+      author: "NjoxPy",
+      id: 1,
+      category: "mindset",
+    },
+    {
+      title: "Getting started with Go",
+      body: "Before diving into go, you need to configure Your text editor",
+      author: "Mdudu",
+      id: 2,
+      category: "web development",
+    },
+  ]);
 
-    const handleDelete = (id) => {
-        const newBlogs = blogs.filter(blog => blog.id !== id);
-        setBlogs(newBlogs);
-    }
+  const handleDelete = (id) => {
+    const newBlogs = blogs.filter((blog) => blog.id !== id);
+    setBlogs(newBlogs);
+  };
 
-    useEffect(() => {
-        console.log("React is awesome!");
-    });
+  useEffect(() => {
+    console.log("React is awesome!");
+  });
 
-    useEffect((title) => {
-        title = document.title;
-        <h2>{title}</h2>
-    });
+  useEffect((title) => {
+    title = document.title;
+    <h2>{title}</h2>;
+  });
 
-    return (
-        <div className="container-fluid">
-            <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete} />
-            <BlogList blogs={blogs.filter((blog) => blog.author == "Alpha X")} title="Alpha Blogs" />
-            <BlogList blogs={blogs.filter((blog) => blog.author == "NjoxPy")} title="NjoxPy Blogs" />
-        </div>
-    );
-}
+  return (
+    <div className="container-fluid">
+      <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete} />
+      <BlogList
+        blogs={blogs.filter((blog) => blog.author == "Alpha X")}
+        title="Alpha Blogs"
+      />
+      <BlogList
+        blogs={blogs.filter((blog) => blog.author == "NjoxPy")}
+        title="NjoxPy Blogs"
+      />
+    </div>
+  );
+};
 
 export default Home;
 ```
@@ -120,32 +137,32 @@ export default Home;
 
 ```js
 // fires a callBack function once since array doesn't have anything
-    useEffect(() => {
-        console.log("React is awesome!");
-    }, []);
+useEffect(() => {
+  console.log("React is awesome!");
+}, []);
 ```
 
-- There are certain  instance in your project you want certain components to be updated into your project but some not, in this situation you pass the name of the component you want to change into your project as a state object.
+- There are certain instance in your project you want certain components to be updated into your project but some not, in this situation you pass the name of the component you want to change into your project as a state object.
 
 ```js
 import { useState, useEffect } from "react";
 
 const Home = () => {
-    // useState in action
-    const [framework, setFramework] = useState("react");
+  // useState in action
+  const [framework, setFramework] = useState("react");
 
-    // useEffect function
-    useEffect(() => {
-        console.log("useEffect in action");
-    }, [framework])
+  // useEffect function
+  useEffect(() => {
+    console.log("useEffect in action");
+  }, [framework]);
 
-    return (
-        <div>
-            <button onClick={setFramework("vue")}>Change Framework</button>
-            <p>{framework}</p>
-        </div>
-    );
-}
+  return (
+    <div>
+      <button onClick={setFramework("vue")}>Change Framework</button>
+      <p>{framework}</p>
+    </div>
+  );
+};
 
 export default Home;
 ```
@@ -156,3 +173,10 @@ From the above example we are only updating famework object into home component,
 
 - Be cautious when using useEffect function with useState.
 - useEffect function doesn't return anything so be careful.
+- Specify Dependencies: Always specify dependencies for your useEffect hooks to avoid unnecessary re-renders or potential bugs. This ensures that the effect only runs when the specified dependencies have changed.
+
+```jsx
+useEffect(() => {
+  // Effect code
+}, [dependency1, dependency2]);
+```
