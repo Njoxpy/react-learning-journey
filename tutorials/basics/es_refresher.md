@@ -14,6 +14,7 @@ Before diving into the world of React, some of the JavaScript concepts you need 
 - [Arrays](#arrays)
 - [Object Destructuring](#object-destructuring)
 - [Spread Operator](#spread-operator)
+- [Module](#module)
 
 ### Variables
 
@@ -78,7 +79,6 @@ function exampleFunction() {
 exampleFunction();
 console.log(x); // Error: x is not defined
 console.log(y); // Error: y is not defined
-
 ```
 
 From the above example, we have a function called exampleFunction in which we have declared a variable x with value 20. Inside the if condition, we have another variable y with value 20. When we try to log out the value of x, we get 10, and the value of y we get 20 since we have talked about the scope of variables declared with let. A variable declared inside the block {} can be accessed within that block. That's why x is printed, but when you try to print out y outside of the if statement, it will result in an error since it is outside of that scope.
@@ -126,7 +126,7 @@ script.js:3 Uncaught TypeError: Assignment to constant variable.
 
 ## Template Literals
 
-- I    In ES6, template literals were introduced in JavaScript. Template strings provide a readable way to create strings. In JavaScript, template literals are enclosed by backticks `.
+- I In ES6, template literals were introduced in JavaScript. Template strings provide a readable way to create strings. In JavaScript, template literals are enclosed by backticks `.
 
 ```js
 // template strings
@@ -172,9 +172,9 @@ Benefits:
 
 ```js
 const student = {
-    name: "NjoxPy",
-    age: 25,
-    country: "Tanzania"
+  name: "NjoxPy",
+  age: 25,
+  country: "Tanzania",
 };
 ```
 
@@ -198,5 +198,70 @@ const { name, age, country } = student;
 In the example above we have an object called `student` with properties like `name, age, country`,with object destructuring we create variables with the same names as objects properties and assign them the corresponding values from the object.
 
 ## Spread Operator
+
+## Module
+
+- Modules allows developers to organize code into resusable and maintainable components.To use a certain module you have to first export(expose outside) then import into a file to use.
+
+- Exporting from a Module:
+  You can export variables, functions, classes from a module using the `export` keyword.
+
+```js
+// math.js
+export const add = (a, b) => a + b;
+export const subtract = (a, b) => a - b;
+```
+
+- Importing into a Module:
+  You can import exported entities into another module using the import keyword.
+
+```js
+// app.js
+import { add, subtract } from "./math.js";
+
+console.log(add(5, 3)); // Output: 8
+console.log(subtract(5, 3)); // Output: 2
+```
+
+- Default Exports:
+
+You can also have a default export in a module. You can only have one `default export` per module.
+
+```js
+// logger.js
+export default function log(message) {
+  console.log(message);
+}
+```
+
+In the importing module, you can choose any name for the default import:
+
+```js
+// app.js
+import customLog from "./logger.js";
+
+customLog("Hello, world!"); // Output: Hello, world!
+```
+
+- Combining Named and Default Exports:
+
+```js
+// utils.js
+export function square(x) {
+  return x * x;
+}
+
+export default function cube(x) {
+  return x * x * x;
+}
+```
+
+```js
+// app.js
+import customCube, { square } from "./utils.js";
+
+console.log(square(5)); // Output: 25
+console.log(customCube(3)); // Output: 27
+```
 
 [⬆️ Return to Top](#top)
