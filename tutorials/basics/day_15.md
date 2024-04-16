@@ -2,6 +2,7 @@
 
 - [Introduction](#introduction)
 - [Working With Forms](#working-with-forms)
+- [React when a user loses focus](#react-when-a-user-loses-focus)
 
 ## Introduction
 
@@ -90,7 +91,32 @@ const [enteredNameIsValid, setEnteredNameIsValid] = useState(false);
 - After we have created code snippets for our project so what follows is that we change value dynamic into the if condition to false if the name is valid and if is correct we update to true,then we display to the user that if the name and email is mepty using conditional rendering.
 
 ```js
-{!enteredNameIsValid && <p>User Name and password must not be empty.</p>;}
+{
+  !enteredNameIsValid && <p>User Name and password must not be empty.</p>;
+}
+```
+
+## React when a user loses focus
+
+- Up to now we have been working with validating user input when a user has submiited a form but it might not be a good user experience so instead of that we might want to handle user input into our program when a user is typing into a form to fill certain details into our program and into that comes a new way to deal with user input by adding a input validation method called `onBlur`, We add into the input tag as an attribute.
+
+```jsx
+<input
+  type="password"
+  className="form-control"
+  id="exampleInputPassword1"
+  onChange={handlePasswordChange}
+  onBlur={nameInputBlueHandler}
+/>
+```
+
+- After we have added onBlue then we need to add a function which handles all of that and insert as a dynamic value into our project.
+
+```jsx
+// define a function for handling onBlur
+const nameInputBlueHandler = (event) => {
+  console.log("Onblur ");
+};
 ```
 
 ## Code Snippets
