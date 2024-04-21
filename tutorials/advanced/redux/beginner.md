@@ -1,3 +1,8 @@
+# Redux Installation
+
+- [Prerequisites](#prerequisites)
+
+## Prerequisites
 # Programming Paradigm
 
 - There are many programming paradigms outthrere but here are the same of the programming paradigms,the style in which programming languages are structured.
@@ -33,6 +38,23 @@ let fn = greetUser;
 - Pass an argument
 
 ## High Order Functions
+
+- High order functions are functions that takes functions as an argument or returns it.There are several functions which are high order functions but some of them map function, filtering, callback function, event handling functions, setInterval ,promises and async function in JavaScript.
+
+- Let's look some of the implemnation of them how they work and where they can be used, for various purpose.
+
+```js
+// map function in
+let numbers = [12, 14, 24];
+
+let number = numbers.map((numb) => {
+  let result = numb * numb;
+  console.log(result);
+});
+
+```
+
+- Async functions are used in Javascript for performing asynchronous operations example on fetching data from an API.
 
 ## Function Composition
 

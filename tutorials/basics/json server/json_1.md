@@ -1,5 +1,11 @@
 # JSON Sever
 
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Creating JSON DB](#creating-json-db)
+- [Fetching Data](#fetching-data)
+- [Fetching Single Item](#fetching-single-item)
+
 - JSON Server is the tool that you can use for web development especially for frontend developers who use API for receiving and transferring data in form of objects from one client to server.There are many requests which can be made to a server inorder to send and receive request to the server.
 
 - Inorder to send and receive request to a server you just need HTTP methods which are PUT, GET, POST, UPDATE and DELETE, there are many HTTP Request which can be done to a server but these are some examples of them.So inorder to create fake restfull API we use __JSON Server__ package, you just have to install in our COmputer using NPM and start working with it.
@@ -122,7 +128,7 @@ json-server --watch data/db.json --port 8001
 
 ## Fetching Data
 
-## Fetching Sinhle Item
+## Fetching Single Item
 <!--
 add a link for materials about JSON
 install json extension json by ZainChen-for data visualization
