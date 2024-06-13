@@ -1,10 +1,20 @@
 # Day 2
 
+- [Components](#components)
+- [JSX](#jsx)
+- [Dynamic Values in Templates](#dynamic-values-in-templates)
+- [Multiple Components](#multiple-components)
+- [Adding Styles](#adding-styles)
+- [Best Practices](#best-practices)
+- [Articles](#articles)
+
+<a name="top"></a>
+
 ## Components
 
 - When creating a website using React, it's best practice to use components to simplify debugging. For example, a website can have components like Navbar, Sidebar, and Footer. We can create individual components for each, such as Navbar component, Sidebar component, Footer component, and so on.
 
-- Components contain both the logic and templates. Templates consist of all HTML code, while logic contains JavaScript code. For instance, the Footer component can include logic that performs a certain action if a user clicks the 'Privacy Policy' link.
+- Components contain both the logic and templates. Templates consist of all HTML code, while logic contains JavaScript code. For instance, the Footer component can include logic that performs a certain action if a user clicks the 'Privacy Policy' link.Also the home page component can contain the landing page with various things such as navigation bar, hero section, sponsor section, testimonials section, and so on.
 
 ## JSX
 
@@ -42,7 +52,7 @@ const Home = () => {
 };
 ```
 
-- The above code demonstrates JSX, which allows us to write valid HTML code alongside JavaScript code in our program. However, there's a difference between JSX and HTML. In HTML, we use class to reference the class for our project. In JSX, we use className instead. This is because class is a special keyword in JavaScript used to create a class, so className is used to reference a class. className follows camelCase notation.
+- The above code demonstrates JSX, which allows us to write valid HTML code alongside JavaScript code in our program. However, there's a difference between JSX and HTML. In HTML, we use class to reference the class for our project. In JSX, we use className instead. This is because class is a special keyword in JavaScript used to create a class, so className is used to reference a class. className follows camelCase notation. So wehn react renders the className changes into the normal class attribute.
 
 - When your HTML code is rendered into the index.js file, className gets converted into class. You can observe this in the browser's Elements section. Babel JS transpiler is responsible for converting all JSX templates into HTML and rendering them to the DOM.
 
@@ -74,7 +84,7 @@ export default Home;
 const title = "Welcome To Fumbakasa Blog";
 ```
 
-- After that then we need to inject blog title into the return statement to be displayed at the center of the webpage,in React to inject any valid Js code we inject using curly braces {} inside curly braces we pass any valid JavaScript code.
+- After that then we need to inject blog title into the return statement to be displayed at the center of the webpage,in React to inject any valid Js code we inject using curly braces {} inside curly braces we pass any valid JavaScript code, we can pass a reference to a function or any other valid JavaScript.
 
 ```js
 const Home = () => {
@@ -97,7 +107,7 @@ export default Home;
 
 ![UI](/assets/hello%20world%20in%20react.PNG)
 
-- So it is better to use dynamic way to update instead of hardcoding values for your application, still on that you can use dynamic as many as you.What we can't output into the the return statement in react is booleans and objects.
+- So it is better to use dynamic way to update instead of hardcoding values for your application, still on that you can use dynamic values as many times as you.What we can't output into the the return statement in react is booleans and objects.
 
 ```js
 const Home = () => {
@@ -137,6 +147,10 @@ touch Navbar.js
 
 - So inside the root component which is app.js there can be other components which are nested inside it but for now I will include home.js file and navbar.js file into app.js of the project.
 
+## Best Practices
+
 ## Adding Styles
 
 ## Articles
+
+[⬆️ Return to Top](#top)

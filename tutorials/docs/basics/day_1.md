@@ -19,7 +19,7 @@
 
 ## Single Page Applications
 
-- SPAs, which stands for Single Page Applications, involve the user requesting a single HTML page initially. Subsequent activities such as click events and routing (navigation) are managed by React.
+- SPAs, which stands for Single Page Applications, involve the user requesting a single HTML page initially. Subsequent activities such as click events and routing (navigation) are managed by React using the `bundle.js` file, so when a user request for a certain page may be `/contact` contact page react looks into the bundle.js file without sending request to the server this makes the website faster.
 
 ## Traditional Websites
 
@@ -29,24 +29,23 @@
 
 ## Prerequisites
 
-- Knowledge of HTML, CSS, and JavaScript.
+- Knowledge of HTML, CSS, and JavaScript and CSS Framework (Bootstrap or Tailwind) (Optional).
 
 ## Tools
 
 | Tools                 | Purpose                                                      |
 | :-------------------- | :----------------------------------------------------------- |
-| Code Editor(VS Code)  | For writing our React code                                   |
-| Simple React Snippets | For React Snippets, to generate boilerplate React components |
-| Node.js               | Helps with installing React.js file boilerplate              |
-
-- Code Editor: VS Code
-- VS Code Extension: Simple React Snippets
+| [Code Editor(VS Code)](https://code.visualstudio.com/download)  | For writing our React code                                   |
+| [Simple React Snippets Extension](https://marketplace.visualstudio.com/items?itemName=burkeholland.simple-react-snippets) | For React Snippets, to generate boilerplate React components |
+| [Node.js](https://nodejs.org/en/download)               | Helps with installing React.js file boilerplate              |
+| [Git(Optional)](https://git-scm.com/downloads)               | Version Control |
 
 ## Creating React Application
 
 - After covering the basics of what React and SPAs are, let's dive into how to kickstart our first React project. To install React, we will use a command-line tool called `create-react-app`, which creates a starter React project boilerplate. However, you can also set it up manually. Before we do that, we need to have Node.js installed on our machine so that we can install it using `npx`.
 
 ```sh
+# check node version
 node -v
 # v18.17.1
 ```
@@ -85,7 +84,7 @@ code .
 
   - `public folder`: Includes files that are public to the browser. In the public folder, there is a file called index.html. This is where React code is injected into the div tag with an id of root.
 
-  - `src`: This is where we will spend most of our time when learning React. All React components will be in the src folder. In the src folder, there
+  - `src`: This is where we will spend most of our time when learning React. All React components will be in the src folder. In the src folder, there are components which we will be creating for our react application example contact page, home page, footer and so on.
 
 ## npm start
 
@@ -94,6 +93,7 @@ code .
 - The npm run start command executes the start script defined in the package.json file's scripts section. It starts the development server specified in the script.
 
 ```sh
+# start development server
 npm run start
 ```
 
@@ -110,3 +110,10 @@ npm run start
 ## Exercise
 
 ## Articles
+
+- [How To Learn React By  Ruben Wieruch in 2024.](https://www.robinwieruch.de/learn-react-js/)
+- [React Official Documentation.](https://react.dev/)
+
+<br>
+
+- [React Day 1](/tutorials/basics/day_2.md)

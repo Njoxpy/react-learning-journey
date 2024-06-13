@@ -1,6 +1,32 @@
 # Part 2
 
+- [React Router Version 6](#react-router-version-6)
+  - [Router Provider](#router-provider)
+  - [createBrowserRouter](#createbrowserrouter)
+  - [Outlet](#outlet)
+  - [Custom 404 Page](#custom-404-page)
+  - [Route Parameters](#route-parameters)
+  - [Error Elements](#error-elements)
+  - [Forms and Actions](#forms-and-actions)
 - [Loaders](#loaders)
+
+## React Router Version 6
+
+## Router Provider
+
+## createBrowserRouter
+
+## Outlet
+
+## Custom 404 Page
+
+## Route Parameters
+
+## Error Elements
+
+## Forms and Actions
+
+## Navigate Component
 
 ## Loaders
 
