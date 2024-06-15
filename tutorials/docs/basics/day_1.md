@@ -116,4 +116,4 @@ npm run start
 
 <br>
 
-- [React Day 1](/tutorials/basics/day_2.md)
+- [React Day 2](/tutorials/basics/day_2.md)

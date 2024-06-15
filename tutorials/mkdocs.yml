@@ -1,1 +1,80 @@
-site_name: My Docs
+site_name: React Learning Journey
+site_url: https://www.mkdocs.org/
+site_description: React Learning Journey documentation with Markdown.
+site_author: MkDocs Team
+
+# nav:
+# - Home: index.md
+# - basics: basics/api/api.md
+# - api reference: api-reference/api-reference.md
+# - tutorials: tutorials/tutorials.md
+# - examples: examples/examples.md
+# - about:
+#       - about: about/about.md
+#       - faq: about/faq.md
+# - best-practices: best-practices/best-practices.md
+# - contributing: contributing/contributing.md
+# - changelog: changelog/changelog.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+# repo_url: https://github.com/mkdocs/mkdocs/
+# edit_uri: blob/master/docs/
+
+# nav:
+
+
+#   # folder structure for the repository
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Njoxpy
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Njox16
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/godbless-nyagawa/
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/Njoxpy" target="_blank" rel="noopener">Godbless Nyagawa(NjoxPy)</a>
