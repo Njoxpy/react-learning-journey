@@ -1,0 +1,14 @@
+{
+  "movies": [
+    {
+      "title": "Kikombo",
+      "releaseDate": 2023,
+      "runtime": 98,
+      "plot": "A man was using React then boom he was reacting",
+      "director": "NjoxPy",
+      "actors": "Godbless, Glory, Jasmine",
+      "genre":"Comedy"
+    }
+  ]
+}
+
